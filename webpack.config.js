@@ -13,7 +13,7 @@ require("dotenv").config();
 module.exports = {		
 		entry: path.resolve(__dirname, "src/entry.js"),
 		output: {
-			path: path.resolve(__dirname, "dist")
+			path: path.resolve(__dirname, "docs")
 		},
 		devServer: {
 			contentBase: path.join(__dirname, 'docs'),
@@ -56,7 +56,7 @@ module.exports = {
 			hash: true,
 			template: require("html-webpack-template"),
 			title: process.env.APP_TITLE,
-			filename: path.resolve(__dirname, "dist/index.html"), //relative to root of the application
+			filename: path.resolve(__dirname, "docs/README.md"), //relative to root of the application
 			bodyHtmlSnippet: "<div id='root'></div>",
 		}),
 		new VueLoaderPlugin(),
